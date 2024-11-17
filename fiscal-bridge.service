@@ -1,0 +1,13 @@
+[Unit]
+Description=Axiloop Fiscal Printer Bridge
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/axiloop/fiscal-bridge
+ExecStart=/usr/bin/node index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
